@@ -38,7 +38,42 @@ Dans le cadre de ma reconversion vers l'administration Systèmes & Réseaux / De
 
 ## 🖼️ Aperçu
 
-*(captures d'écran à ajouter : dashboard Zabbix, configuration Keycloak, topologie réseau pfSense)*
+### 🗺️ Architecture
+
+![Architecture réseau](screenshots/architecture-reseau.png)
+*Schéma de l'architecture finale : segmentation VLAN, flux entre zones, accès distants et points de vigilance.*
+
+### 📡 Supervision
+
+![Dashboard Zabbix](screenshots/zabbix-dashboard.png)
+*Vue globale de la supervision de l'infrastructure et des alertes dans Zabbix.*
+
+### 🛡️ Sécurité
+
+![Agents Wazuh](screenshots/wazuh-agents.png)
+*Agents actifs supervisés depuis la console centralisée Wazuh.*
+
+![Événements Wazuh](screenshots/wazuh-events.png)
+*Centralisation et analyse des événements de sécurité provenant de plusieurs serveurs.*
+
+![Règles OpenVPN pfSense](screenshots/pfsense-openvpn-rules.png)
+*Le VPN donne accès aux applications et au bastion, mais bloque les accès SSH/RDP directs aux serveurs.*
+
+### 🔐 Identités & accès
+
+![Utilisateurs Keycloak](screenshots/keycloak-users.png)
+*Gestion centralisée des comptes et des rôles via Keycloak.*
+
+![Connexion SSO GLPI](screenshots/glpi-sso-login.png)
+*Authentification unique (SSO) entre GLPI et Keycloak.*
+
+![Portail self-service GLPI](screenshots/glpi-helpdesk-portal.png)
+*Portail helpdesk GLPI avec gestion des profils par groupe (Self-Service / Technicien).*
+
+### ⚙️ Automatisation
+
+![Playbook Ansible](screenshots/ansible-playbook-ad-users.png)
+*Exécution d'un playbook Ansible créant automatiquement des comptes utilisateurs dans Active Directory.*
 
 ## 🧑‍💻 Auteure
 
